@@ -1,0 +1,529 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  height: 400px;
+  background-color: #d5d2d2; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.name {
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-around;
+}
+
+.navigation {
+  padding: 10px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  height: 40px;
+}
+  
+.navigation  li {
+  float: left;
+}
+  
+.navigation li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+.navigation li a:hover:not(.active) {
+  background-color: #ddd;
+}
+  
+.navigation li a.active {
+  color: white;
+  background-color: #04AA6D;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px 40px;
+}
+
+.text p{
+  text-align: justify;
+  font-size: 20px;
+}
+
+.text {
+  max-width: 250px;
+  padding-left: 90px;
+}
+
+.text #intro {
+  font-size: 60px;
+}
+
+.introduction img {
+  margin-right: 80px;
+  max-width: 600px;
+  max-height: 230px;
+}
+
+.main {
+  width: 100%;
+  max-height: auto; 
+  padding: 50px 50px 20px 50px;
+}
+
+.circle-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 400px;
+}
+
+.circle-elements .circle {
+  width: 30px;
+  height: 30px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 120px;
+}
+
+.content img {
+  margin: 10px;
+  margin-bottom: 25px;
+  width: 300px;
+  height: 300px;
+}
+
+.strip {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0px 110px;
+}
+
+.strip img {
+  width: 100%;
+  height: 120px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 400px;
+  background-color: #bbb;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  color: #4d4d4d;
+  background-color: #ffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="spotify"] .filled,
+.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
+  background-color: #1db954;
+}
+
+.example-2 .icon-content a[data-social="pinterest"] .filled,
+.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+  background-color: #bd081c;
+}
+
+.example-2 .icon-content a[data-social="dribbble"] .filled,
+.example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
+  background-color: #ea4c89;
+}
+
+.example-2 .icon-content a[data-social="telegram"] .filled,
+.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+  background-color: #0088cc;
+}
+
+.copyright {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 10px 20px;
+  }
+
+  .name img {
+    width: 200px;
+    height: 80px;
+  }
+
+  .main {
+    padding: 0px;
+  }
+
+  .introduction {
+    flex-direction: column;
+  }
+
+  .text p{
+    text-align: justify;
+    font-size: 18px;
+  }
+  
+  .text {
+    padding-left: 0px;
+  }
+
+  .text #intro {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .introduction img {
+    width: 350px;
+    height: 180px;
+    margin-right: 0px;
+  }
+
+  .circle-elements {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  .circle-elements .circle {
+    width: 30px;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 20%;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .content {
+    margin: 10px;
+  }
+
+  .example-2 .icon-content a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .example-2 .icon-content a svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .strip img {
+    width: 300px;
+    height: 120px;
+  }
+  
+  .strip {
+    margin: 0px 0px;
+  }
+
+  .copyright {
+    font-size: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 602px) and (max-width: 700px) {
+
+  .introduction img {
+    width: 350px;
+    height: 180px;
+    margin-right: 0px;
+  }
+
+  .text p{
+    text-align: justify;
+    font-size: 18px;
+  }
+  
+  .text {
+    padding-right: 30px;
+    padding-left: 0px;
+  }
+
+  .text #intro {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .content {
+    margin: 10px;
+  }
+
+  .name {
+    justify-content: flex-start;
+    padding: 10px 0px 20px 20px;
+  }
+
+  .main {
+    padding: 0px;
+  }
+
+  .name img {
+    width: 200px;
+    height: 80px;
+  }
+
+  .circle-elements {
+    display: none;
+  }
+
+  .circle-elements .circle {
+    display: none;
+  }
+
+  .copyright {
+    padding-left: 15px;
+  }
+
+  .example-2 .icon-content a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .example-2 .icon-content a svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .strip img {
+    width: 90%;
+    height: 120px;
+  }
+  
+  .strip {
+    margin: 0px 0px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 930px) {
+  .introduction img {
+    max-width: 400px;
+    max-height: 250px;
+    margin-right: 0px;
+  }
+
+  .text p{
+    text-align: justify;
+    font-size: 20px;
+  }
+  
+  .text {
+    padding-right: 30px;
+    padding-left: 0px;
+  }
+
+  .text #intro {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .content {
+    margin: 10px;
+  }
+
+  .name {
+    justify-content: space-around;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 30px;
+  }
+
+  .navigation ul {
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .main {
+    padding: 0px;
+  }
+
+  .name img {
+    max-width: 200px;
+    max-height: 80px;
+  }
+
+  .navigation li a {
+    text-align: center;
+    padding: 10px 13px;
+  }
+
+  .circle-elements {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .circle-elements .circle {
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .copyright {
+    padding-left: 15px;
+  }
+
+  .strip img {
+    width: 90%;
+    height: 120px;
+  }
+  
+  .strip {
+    margin: 0px 0px;
+  }
+}
+
+@media screen and (min-width: 930px) and (max-width: 1240px) {
+  .content {
+    margin: 10px;
+  }
+  
+  .main {
+    padding: 0px;
+  }
+
+  .strip img {
+    width: 90%;
+    height: 120px;
+  }
+  
+  .strip {
+    margin: 0px 0px;
+  }
+
+  .name {
+    padding: 20px 0px;
+  }
+
+  .circle-elements .circle {
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .introduction img {
+    margin-right: 0px;
+    max-width: 500px;
+    max-height: 180px;
+  }
+}
